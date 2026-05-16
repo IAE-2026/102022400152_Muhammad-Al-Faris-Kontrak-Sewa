@@ -18,6 +18,42 @@
                         "description": "Success"
                     }
                 }
+            },
+            "post": {
+                "tags": [
+                    "Contracts"
+                ],
+                "summary": "Create contract",
+                "operationId": "73a91076ec6423051d986a4149fa8d87",
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    }
+                }
+            }
+        },
+        "/api/contracts/{id}": {
+            "get": {
+                "tags": [
+                    "Contracts"
+                ],
+                "summary": "Get contract by ID",
+                "operationId": "9445ed7aeeb30a8907fad6500bd937a9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
             }
         }
     },

@@ -31,6 +31,17 @@ class ContractController extends Controller
         ]);
     }
 
+    #[OA\Post(
+    path: "/api/contracts",
+    summary: "Create contract",
+    tags: ["Contracts"],
+    responses: [
+        new OA\Response(
+            response: 201,
+            description: "Created"
+        )
+    ]
+)]
     public function store()
     {
         $contract = Contract::create([
@@ -52,7 +63,25 @@ class ContractController extends Controller
             'data' => $contract
         ]);
     }
-
+#[OA\Get(
+    path: "/api/contracts/{id}",
+    summary: "Get contract by ID",
+    tags: ["Contracts"],
+    parameters: [
+        new OA\Parameter(
+            name: "id",
+            in: "path",
+            required: true,
+            schema: new OA\Schema(type: "integer")
+        )
+    ],
+    responses: [
+        new OA\Response(
+            response: 200,
+            description: "Success"
+        )
+    ]
+)]
     public function show($id)
     {
         $contract = Contract::find($id);
