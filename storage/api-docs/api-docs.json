@@ -1,0 +1,30 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Kontrak Sewa API",
+        "description": "Swagger Documentation for Kontrak Sewa API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/contracts": {
+            "get": {
+                "tags": [
+                    "Contracts"
+                ],
+                "summary": "Get all contracts",
+                "operationId": "971f1fdec41a8eaf0830d94e9ee15496",
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Contracts",
+            "description": "Contracts"
+        }
+    ]
+}
