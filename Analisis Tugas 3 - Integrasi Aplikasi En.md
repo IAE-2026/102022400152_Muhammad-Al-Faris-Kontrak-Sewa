@@ -29,10 +29,16 @@ Selain melakukan audit, service juga mengirimkan event ke RabbitMQ menggunakan r
 
 Data Transaksi
 
+
 Data yang dikirim ke sistem pusat berisi informasi utama mengenai kontrak dan aktivitas yang dilakukan, seperti contract_id, tenant_id, property_id, approved_by, dan status kontrak.
 
 Contoh data yang dikirim:
 
+Data yang dikirim ke sistem pusat berisi informasi utama mengenai kontrak dan aktivitas yang dilakukan, seperti contract_id, tenant_id, property_id, approved_by, dan status kontrak.
+
+Contoh data yang dikirim:
+
+```json
 {
   "contract_id": 4,
   "activity": "ContractApproved",
@@ -41,6 +47,7 @@ Contoh data yang dikirim:
   "approved_by": "warga31@ktp.iae.id",
   "status": "signed"
 }
+```
 
 Hasil Pengujian
 
