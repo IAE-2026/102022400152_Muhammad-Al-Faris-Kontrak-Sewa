@@ -34,5 +34,11 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+    'iae' => [
+    'base_url' => env('IAE_BASE_URL', 'https://iae-sso.virtualfri.id'),
+    'api_key' => env('IAE_API_KEY'),
+    'team_id' => env('IAE_TEAM_ID', 'TEAM-08'),
+    'service_name' => env('IAE_SERVICE_NAME', 'kontrak-sewa-service'),
+],
 
 ];
