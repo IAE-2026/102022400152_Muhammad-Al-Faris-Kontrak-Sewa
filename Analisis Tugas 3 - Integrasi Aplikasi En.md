@@ -10,7 +10,7 @@ API Key : KEY-MHS-200
 
 Transaksi Kritis
 
-Pada Tugas 3 ini, transaksi kritis yang dipilih adalah proses persetujuan kontrak sewa (ContractApproved) melalui endpoint POST /api/contracts/{id}/approve.
+Pada Tugas 3 ini, transaksi kritis yang dipilih adalah proses persetujuan kontrak sewa (ContractApproved) melalui endpoint POST /api/v1/contracts/{id}/approve
 
 Transaksi ini dipilih karena ketika penyewa menyetujui kontrak, status kontrak berubah dari draft menjadi signed. Perubahan status tersebut menunjukkan bahwa kontrak telah disetujui dan proses penyewaan dapat dilanjutkan.
 
@@ -32,9 +32,6 @@ Data Transaksi
 
 Data yang dikirim ke sistem pusat berisi informasi utama mengenai kontrak dan aktivitas yang dilakukan, seperti contract_id, tenant_id, property_id, approved_by, dan status kontrak.
 
-Contoh data yang dikirim:
-
-Data yang dikirim ke sistem pusat berisi informasi utama mengenai kontrak dan aktivitas yang dilakukan, seperti contract_id, tenant_id, property_id, approved_by, dan status kontrak.
 
 Contoh data yang dikirim:
 
