@@ -37,6 +37,7 @@ Pengujian yang sudah dilakukan:
 * GraphQL tanpa API key mengembalikan status `401`.
 * GraphQL dengan API key berhasil menampilkan data contract.
 * Docker container berhasil berjalan pada port `8000`.
+* Docker fresh build berhasil dijalankan dari Dockerfile dan aplikasi tetap dapat mengakses Swagger serta GraphQL Playground.
 
 ## Catatan
 
