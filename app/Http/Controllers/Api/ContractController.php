@@ -14,9 +14,10 @@ use OpenApi\Attributes as OA;
 class ContractController extends Controller
 {
     #[OA\Get(
-        path: "/api/contracts",
+        path: "/api/v1/contracts",
         summary: "Get all contracts",
         tags: ["Contracts"],
+        security: [['iaeKey' => []]],
         responses: [
             new OA\Response(
                 response: 200,
@@ -36,9 +37,10 @@ class ContractController extends Controller
     }
 
     #[OA\Post(
-        path: "/api/contracts",
+        path: "/api/v1/contracts",
         summary: "Create contract",
         tags: ["Contracts"],
+        security: [['iaeKey' => []]],
         responses: [
             new OA\Response(
                 response: 201,
@@ -69,9 +71,10 @@ class ContractController extends Controller
     }
 
     #[OA\Get(
-        path: "/api/contracts/{id}",
+        path: "/api/v1/contracts/{id}",
         summary: "Get contract by ID",
         tags: ["Contracts"],
+        security: [['iaeKey' => []]],
         parameters: [
             new OA\Parameter(
                 name: "id",
@@ -93,15 +96,17 @@ class ContractController extends Controller
 
         if (!$contract) {
             return response()->json([
-                'status' => 'error',
-                'message' => 'Contract not found'
-            ], 404);
+              'status' => 'error',
+              'message' => 'Contract not found',
+              'errors' => null,
+    ], 404);
         }
 
         return response()->json([
             'status' => 'success',
+            'message' => 'Contract retrieved successfully',
             'data' => $contract
-        ]);
+]);
     }
 
     public function update($id)

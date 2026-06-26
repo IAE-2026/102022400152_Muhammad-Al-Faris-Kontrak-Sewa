@@ -9,6 +9,12 @@ use OpenApi\Attributes as OA;
     title: "Kontrak Sewa API",
     description: "Swagger Documentation for Kontrak Sewa API"
 )]
+#[OA\SecurityScheme(
+    securityScheme: 'iaeKey',
+    type: 'apiKey',
+    name: 'X-IAE-KEY',
+    in: 'header'
+)]
 class SwaggerController
 {
 }

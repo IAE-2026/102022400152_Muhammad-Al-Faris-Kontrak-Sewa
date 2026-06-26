@@ -5,7 +5,7 @@ use App\Http\Controllers\Api\ContractController;
 use App\Http\Controllers\Api\SsoController;
 
 
-Route::prefix('v1')->group(function () {
+Route::prefix('v1')->middleware('iae.key')->group(function () {
     Route::post('/auth/login', [SsoController::class, 'login']);
 
     Route::get('/contracts', [ContractController::class, 'index']);
