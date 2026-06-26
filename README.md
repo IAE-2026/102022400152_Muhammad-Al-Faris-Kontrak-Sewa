@@ -208,5 +208,52 @@ docker compose down
 Untuk menjalankan kembali:
 
 ```bash
+
+## GraphQL Playground
+
+GraphQL Playground dapat diakses melalui:
+
+```text
+http://localhost:8000/graphql-playground
+```
+
+Halaman ini digunakan untuk menjalankan query GraphQL melalui browser. Masukkan API key berikut pada field `X-IAE-KEY`:
+
+```text
+102022400152
+```
+
+Contoh query:
+
+```graphql
+{
+  contracts {
+    id
+    contract_number
+    property_id
+    tenant_id
+    status
+    monthly_rent
+  }
+}
+```
+
+## Docker Quick Start
+
+Untuk menjalankan project dari hasil clone repository menggunakan Docker:
+
+```bash
+docker compose up -d --build
+```
+
+Docker akan menyiapkan dependency Composer, file `.env`, database SQLite, migration, dan Swagger secara otomatis.
+
+Akses aplikasi melalui:
+
+```text
+Swagger: http://localhost:8000/api/documentation
+GraphQL Playground: http://localhost:8000/graphql-playground
+```
+
 docker compose up -d
 ```
